@@ -5,24 +5,29 @@
 class FritzTls < Formula
   desc "Automate TLS certificate installation for AVM FRITZ!Box"
   homepage "https://github.com/tisba/fritz-tls"
-  version "0.8.0"
+  version "0.9.0"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/tisba/fritz-tls/releases/download/v0.8.0/fritz-tls_0.8.0_darwin_x86_64.zip"
-    sha256 "c25e6017eb851a67264faacdeb5b083f1b6deccbb88810b4caf5e8d2ae4802b4"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/tisba/fritz-tls/releases/download/v0.9.0/fritz-tls_0.9.0_darwin_x86_64.zip"
+      sha256 "1fbcf4002ef8576f9a644016ebbfaacc9e48a817f8025220ede69612ad63b2cc"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/tisba/fritz-tls/releases/download/v0.9.0/fritz-tls_0.9.0_darwin_arm64.zip"
+      sha256 "84fe979fb36510dcc165b6cbe8b4b4a39ff72569cd4019a9a8bc0e87045789ad"
+    end
   end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/tisba/fritz-tls/releases/download/v0.8.0/fritz-tls_0.8.0_darwin_arm64.zip"
-    sha256 "af7b6a9e8a4fb491841b3d41f7395bb4842b1b40df1258436948c5afa232de05"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/tisba/fritz-tls/releases/download/v0.8.0/fritz-tls_0.8.0_linux_x86_64.tar.gz"
-    sha256 "002cfa55c92d07296b208ee570d4105f5c7d42b66f643b7096c08ace832339ff"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/tisba/fritz-tls/releases/download/v0.8.0/fritz-tls_0.8.0_linux_arm64.tar.gz"
-    sha256 "dfaff8f66cb402f4b3b3cf998f5af0aa50f1bd04a685fbe45c3920a2b3f2dde7"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/tisba/fritz-tls/releases/download/v0.9.0/fritz-tls_0.9.0_linux_x86_64.tar.gz"
+      sha256 "5d241f3222c1e7cb7879b38ac488fb912a2ffaa400c19276ba84d842dce6a23e"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/tisba/fritz-tls/releases/download/v0.9.0/fritz-tls_0.9.0_linux_arm64.tar.gz"
+      sha256 "4cb88d318d2bdcf92cb9f60a0a03072591f7aacc2cb247a7baaa9d42fc1a5189"
+    end
   end
 
   def install
