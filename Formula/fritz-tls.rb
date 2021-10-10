@@ -5,28 +5,28 @@
 class FritzTls < Formula
   desc "Automate TLS certificate installation for AVM FRITZ!Box"
   homepage "https://github.com/tisba/fritz-tls"
-  version "0.10.0"
+  version "0.11.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/tisba/fritz-tls/releases/download/v0.10.0/fritz-tls_0.10.0_darwin_x86_64.zip"
-      sha256 "0887e12e4864b8ea2c4d4e4a4c61d01d2550db5d9f8464bdcfdb335c900689aa"
+      url "https://github.com/tisba/fritz-tls/releases/download/v0.11.0/fritz-tls_0.11.0_darwin_x86_64.zip"
+      sha256 "771d7d15ca600496d06decd1142a849fbea394d57ba563fb066f08649dfbc144"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/tisba/fritz-tls/releases/download/v0.10.0/fritz-tls_0.10.0_darwin_arm64.zip"
-      sha256 "07f2b395e2c814488a6d0ab386728438671c3f0ddb7e18cf1d72bef46052a873"
+      url "https://github.com/tisba/fritz-tls/releases/download/v0.11.0/fritz-tls_0.11.0_darwin_arm64.zip"
+      sha256 "028a2a1d8e7d6eb7041efda9ad2fb03d71a86c7ddc84083343e5aa0d68a7e3a6"
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/tisba/fritz-tls/releases/download/v0.10.0/fritz-tls_0.10.0_linux_x86_64.tar.gz"
-      sha256 "87a35dda96387db483df2896f1da2de7273c5d5649cfa69cd3669c8df140861d"
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tisba/fritz-tls/releases/download/v0.10.0/fritz-tls_0.10.0_linux_arm64.tar.gz"
-      sha256 "f68581606de51c136bca10c6e510a7915a7df862f0b69fe8244784ce5e7b8121"
+      url "https://github.com/tisba/fritz-tls/releases/download/v0.11.0/fritz-tls_0.11.0_linux_arm64.tar.gz"
+      sha256 "ec8ba51cf69c5fb5a19b4197a0e74870710ab1a89b46504accecd232fede128d"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/tisba/fritz-tls/releases/download/v0.11.0/fritz-tls_0.11.0_linux_x86_64.tar.gz"
+      sha256 "2accd8476c1190dde8014c742fbf667a1fc5599e0f732646306fecd2896555f5"
     end
   end
 
