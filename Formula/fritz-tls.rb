@@ -6,7 +6,6 @@ class FritzTls < Formula
   desc "Automate TLS certificate installation for AVM FRITZ!Box"
   homepage "https://github.com/tisba/fritz-tls"
   version "0.11.0"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
