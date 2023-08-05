@@ -5,20 +5,20 @@
 class FritzTls < Formula
   desc "Automate TLS certificate installation for AVM FRITZ!Box"
   homepage "https://github.com/tisba/fritz-tls"
-  version "0.17.0"
+  version "0.18.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/tisba/fritz-tls/releases/download/v0.17.0/fritz-tls_0.17.0_darwin_arm64.zip"
-      sha256 "2caedb62a2b7b8c524ea9b5b1ecf820040e9700c507a632e9ae16adc35561ea7"
+      url "https://github.com/tisba/fritz-tls/releases/download/v0.18.0/fritz-tls_0.18.0_darwin_arm64.zip"
+      sha256 "f9aeff1afa8c96c174d1a2a1b05b48bf73d6015bf2abc86f4db02ee4530b1c4e"
 
       def install
         bin.install "fritz-tls"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tisba/fritz-tls/releases/download/v0.17.0/fritz-tls_0.17.0_darwin_amd64.zip"
-      sha256 "d3e97a56c98dc224fa05360da114de41bd73791f1470a0f04466e373bf8f5745"
+      url "https://github.com/tisba/fritz-tls/releases/download/v0.18.0/fritz-tls_0.18.0_darwin_amd64.zip"
+      sha256 "d0382791f962261273c985b6029528ff8f3e687a4fea5cc3fd316f3bcd3d1914"
 
       def install
         bin.install "fritz-tls"
@@ -27,25 +27,25 @@ class FritzTls < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tisba/fritz-tls/releases/download/v0.17.0/fritz-tls_0.17.0_linux_arm64.tar.gz"
-      sha256 "75c326ce22a492270e9edafb47f2dd8240a75374f18e917e4895eb435bfa4ebe"
-
-      def install
-        bin.install "fritz-tls"
-      end
-    end
     if Hardware::CPU.intel?
-      url "https://github.com/tisba/fritz-tls/releases/download/v0.17.0/fritz-tls_0.17.0_linux_amd64.tar.gz"
-      sha256 "3679da3b57faef49cdb3f762785d6944e316a5777e436b5b3d51eca893748c34"
+      url "https://github.com/tisba/fritz-tls/releases/download/v0.18.0/fritz-tls_0.18.0_linux_amd64.tar.gz"
+      sha256 "27336ca35184c4607cd502ce7f4c2386ea758bd450178cab8fc4bc9d34826181"
 
       def install
         bin.install "fritz-tls"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/tisba/fritz-tls/releases/download/v0.17.0/fritz-tls_0.17.0_linux_armv6.tar.gz"
-      sha256 "a92adf0211baa677527ab61734b92c5b7400a08cf279c92a68a3f43049c16c5c"
+      url "https://github.com/tisba/fritz-tls/releases/download/v0.18.0/fritz-tls_0.18.0_linux_armv6.tar.gz"
+      sha256 "355d4f461a3159d608ec4fa775d88fcd367aadf70e32034387076b2368d9a9a0"
+
+      def install
+        bin.install "fritz-tls"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/tisba/fritz-tls/releases/download/v0.18.0/fritz-tls_0.18.0_linux_arm64.tar.gz"
+      sha256 "0a1655a8ff8cb39c8420435883b1eb1cd3d67b92154ca1087b028eb8d7d8ddb3"
 
       def install
         bin.install "fritz-tls"
