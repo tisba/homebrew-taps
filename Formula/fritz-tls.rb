@@ -5,20 +5,20 @@
 class FritzTls < Formula
   desc "Automate TLS certificate installation for AVM FRITZ!Box"
   homepage "https://github.com/tisba/fritz-tls"
-  version "0.19.0"
+  version "0.20.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/tisba/fritz-tls/releases/download/v0.19.0/fritz-tls_0.19.0_darwin_amd64.zip"
-      sha256 "8254a62e93eaf96836ec7ebd383e100bfd9e75ef56f30281a8e974d28916d78e"
+      url "https://github.com/tisba/fritz-tls/releases/download/v0.20.0/fritz-tls_0.20.0_darwin_amd64.zip"
+      sha256 "93e583cdb834a19682e092e6f4c58e7e963fd5296edb1850ed8cb95afb2a0f5a"
 
       def install
         bin.install "fritz-tls"
       end
     end
     on_arm do
-      url "https://github.com/tisba/fritz-tls/releases/download/v0.19.0/fritz-tls_0.19.0_darwin_arm64.zip"
-      sha256 "74912db4a4af698814900677b7aa689fb50ef4b68bd3e0146327ecfb76eeb855"
+      url "https://github.com/tisba/fritz-tls/releases/download/v0.20.0/fritz-tls_0.20.0_darwin_arm64.zip"
+      sha256 "51bfe493e19906a7972050d879babe92e509d67cffc2d952206f690790784f23"
 
       def install
         bin.install "fritz-tls"
@@ -29,8 +29,8 @@ class FritzTls < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/tisba/fritz-tls/releases/download/v0.19.0/fritz-tls_0.19.0_linux_amd64.tar.gz"
-        sha256 "50bfe816afe9e8b54fbe6e9a4d39d9c8720097a419ee03ba6fe20290076e3bc8"
+        url "https://github.com/tisba/fritz-tls/releases/download/v0.20.0/fritz-tls_0.20.0_linux_amd64.tar.gz"
+        sha256 "0375c63744fd631fc306a45c4375620ce0869621f3b1b4922b87370bab54fcea"
 
         def install
           bin.install "fritz-tls"
@@ -39,8 +39,8 @@ class FritzTls < Formula
     end
     on_arm do
       if !Hardware::CPU.is_64_bit?
-        url "https://github.com/tisba/fritz-tls/releases/download/v0.19.0/fritz-tls_0.19.0_linux_armv6.tar.gz"
-        sha256 "72b2d57913db8ee913ff416ac869d885e4f9676a977aeb9d463db34004f73fd6"
+        url "https://github.com/tisba/fritz-tls/releases/download/v0.20.0/fritz-tls_0.20.0_linux_armv6.tar.gz"
+        sha256 "41efc7edbbc1f9c2b15bd3fa6f2b551463785292d61be73a948f813bedb9ff5e"
 
         def install
           bin.install "fritz-tls"
@@ -49,8 +49,8 @@ class FritzTls < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/tisba/fritz-tls/releases/download/v0.19.0/fritz-tls_0.19.0_linux_arm64.tar.gz"
-        sha256 "7f974e8e36713145e73d1e05a8eae3a7e43704b6cd71ae4fff6485da08166435"
+        url "https://github.com/tisba/fritz-tls/releases/download/v0.20.0/fritz-tls_0.20.0_linux_arm64.tar.gz"
+        sha256 "a3e3eada5b4de431da7214e1a3e6e3bb1009613a03537eb7b7a8243bc8fdb7f0"
 
         def install
           bin.install "fritz-tls"
