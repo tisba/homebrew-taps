@@ -2,7 +2,7 @@
 cask "fritz-tls" do
   desc "Automate TLS certificate installation for AVM FRITZ!Box"
   homepage "https://github.com/tisba/fritz-tls"
-  version "0.23.0"
+  version "0.24.0"
 
   livecheck do
     skip "Auto-generated on release."
@@ -12,29 +12,25 @@ cask "fritz-tls" do
 
   on_macos do
     on_intel do
-      url "https://github.com/tisba/fritz-tls/releases/download/v0.23.0/fritz-tls_0.23.0_darwin_amd64.zip"
-      sha256 "76e6291a07712cc271a4f62d126719c60c3fe1d30a4df7e932f4ca5f8b65ab6e"
+      url "https://github.com/tisba/fritz-tls/releases/download/v0.24.0/fritz-tls_0.24.0_darwin_amd64.zip"
+      sha256 "3311ff8c20af9b64a4ca418766909f1472c4a5cb8eb748eaeefa8313c82c3f32"
     end
     on_arm do
-      url "https://github.com/tisba/fritz-tls/releases/download/v0.23.0/fritz-tls_0.23.0_darwin_arm64.zip"
-      sha256 "48d08053c0da545314d3106ea48b404c81a0d1b9ee9e7652f49c4a8a4c032654"
+      url "https://github.com/tisba/fritz-tls/releases/download/v0.24.0/fritz-tls_0.24.0_darwin_arm64.zip"
+      sha256 "6cb418ace29fc1890edd1dfad5837527479e8ab4cb6ccbc3e0bda306601451d3"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/tisba/fritz-tls/releases/download/v0.23.0/fritz-tls_0.23.0_linux_amd64.tar.gz"
-      sha256 "7ed6beb2ebeaefa52639bbf81169414fd6a9e19181b6b4cbb242e6dec30156ff"
+      url "https://github.com/tisba/fritz-tls/releases/download/v0.24.0/fritz-tls_0.24.0_linux_amd64.tar.gz"
+      sha256 "7af33ba515d2bed27873ee45b857f51222f2498fc77228e79abb7d0a5c851ef8"
     end
     on_arm do
-      url "https://github.com/tisba/fritz-tls/releases/download/v0.23.0/fritz-tls_0.23.0_linux_arm64.tar.gz"
-      sha256 "b16efb35ecb3421a9bfe7bc8e20d0f4f8e61a92af7717d28172f171a7552cbb7"
+      url "https://github.com/tisba/fritz-tls/releases/download/v0.24.0/fritz-tls_0.24.0_linux_arm64.tar.gz"
+      sha256 "345671eb7d3c54a4a86430d28d452e7af4d46ca943de4f8f25921201c89b5bf5"
     end
   end
-
-  conflicts_with formula: [
-      "fritz-tls",
-    ]
 
   postflight do
     if system_command("/usr/bin/xattr", args: ["-h"]).exit_status == 0
