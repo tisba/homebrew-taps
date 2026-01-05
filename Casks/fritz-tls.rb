@@ -3,7 +3,7 @@ cask "fritz-tls" do
   name "fritz-tls"
   desc "Automate TLS certificate installation for AVM FRITZ!Box"
   homepage "https://github.com/tisba/fritz-tls"
-  version "0.26.0"
+  version "0.26.1"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "fritz-tls" do
   on_macos do
     on_intel do
       url "https://github.com/tisba/fritz-tls/releases/download/v#{version}/fritz-tls_#{version}_darwin_amd64.zip"
-      sha256 "6b9c224aa7368781b581cfc39eca69427efe423c057c429b20c43fb7d1e1af17"
+      sha256 "652943c8dd7e87914b969fa183244a6b1dee1a58a70897e5acfd643ed160a1a1"
     end
     on_arm do
       url "https://github.com/tisba/fritz-tls/releases/download/v#{version}/fritz-tls_#{version}_darwin_arm64.zip"
-      sha256 "1a71b487b68f950e5c4d4d238aca3177baad788966e54199494e447f73668717"
+      sha256 "39fd873e14e91bb4b64333b53b7d5de8bfdd650112b5bb5e7b8e66ec864ee6ba"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/tisba/fritz-tls/releases/download/v#{version}/fritz-tls_#{version}_linux_amd64.tar.gz"
-      sha256 "a1f18e7e4c520e1a94b652e6e8aa899419b5328b427081163648d71fa4bf4c71"
+      sha256 "5e0761ae3f488f27276d72975342b021a5cb012d127400a1d7155dbb49e5a3a0"
     end
     on_arm do
       url "https://github.com/tisba/fritz-tls/releases/download/v#{version}/fritz-tls_#{version}_linux_arm64.tar.gz"
-      sha256 "b7cb163ec70a72f03c6cc4c59722183312eb3ca03175e6c2281fa76d4ef252a8"
+      sha256 "2c9ed5d3678be029ddb9910d6bd14fa3df3d618cb0e968ef5c8ed0dfd5e08022"
     end
   end
 
